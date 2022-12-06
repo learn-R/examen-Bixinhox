@@ -3,7 +3,7 @@
     "path": "~/GitHub/01_tarea-tareas-optativo-r/examen-Bixinhox/R/Analisis.Rmd",
     "project_path": "R/Analisis.Rmd",
     "type": "r_markdown",
-    "hash": "3700533276",
+    "hash": "3067675984",
     "contents": "",
     "dirty": false,
     "created": 1670215484606.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled2",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "140,46",
-        "scrollLine": "127"
+        "cursorPosition": "22,1509",
+        "scrollLine": "17"
     },
     "folds": "",
-    "lastKnownWriteTime": 1670297602,
+    "lastKnownWriteTime": 1670300721,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1670297602101,
+    "last_content_update": 1670300721191,
     "read_only": false,
     "read_only_alternatives": []
 }

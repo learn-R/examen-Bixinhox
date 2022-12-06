@@ -13,12 +13,14 @@ output: html_document
 
 ## 1. Abstract 
 
+Durante los últimos tres años el mundo entero ha vivido la conmoción de la pandemia de la COVID-19, y especialmente en Chile el impacto no ha sido menor. Gran parte de los problemas de la pandemia fueron producto de esta como el confinamiento y la recesión. En específico,  y a raíz del confinamiento, la salud mental de las personas ha sufrido diferentes cambios debido al poco desarrollo social existente durante las cuarentenas vividas en gran medida durante el 2020 en nuestro país. Es por esto que es de gran importante investigar los efectos de la pandemia en la salud mental de los chilenos para que prontamente se puedan abordar políticas publicas en favor del bienestar de la sociedad. 
 
 
+Palabras Claves: Salud Mental, COVID-19, Chile.
 
 ## 2. Introduccion
 
-
+Las cuarentenas aplicadas durante el gobierno de Sebastián Piñera impusieron restricción a la sociedad nunca antes presentadas en el país, o no de la magnitud que se vivió durante los meses en que se aplicó. Los efectos colaterales afectaron varias aristas de la población de Chile; en temas económicos se produjeron grandes problemas en las pérdidas de empleos, en la baja de sueldos, el alza del costo de la vida, entre otras. En una arista de mayor importancia, la COVID-19 afecto fuertemente la salud física de las personas debido a las grandes tasas de contagios que se produjeron durante todo el transcurso de la pandemia, pero, algo que no ha tomado la relevancia que se merece, la COVID-19 y el confinamiento produjeron efectos colaterales graves en la salud mental de las personas, es así que durante estos años se han realizado diversos estudios y encuestas para saber el real efecto de la enfermedad en temas como la salud mental. Es así como “Termómetro Social” ha podido establecer diferentes encuestas con estos fines, y en esta investigación se ha utilizado la última realizada en este centro de estudios, realizada en octubre de 2020. En uno de los módulos establecidos aquí, es orientado específicamente hacia la salud mental, con once preguntas sobre la temática se busca saber el impacto de la COVID-19 en la salud mental, por ejemplo, en el consumo de medicamentos como antidepresivos, si cree necesario asistir a sesiones de terapia, el animo que poseen durante la pandemia, entre otras. 
 
 
 ## 3. Analisis de Datos
