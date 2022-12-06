@@ -1,0 +1,3 @@
+"0","TS4 <- read_dta(""input/data/TS4.dta"")"
+"2","Error: 'input/data/TS4.dta' does not exist in current working directory ('C:/Users/jp_pe/OneDrive/Documentos/GitHub/01_tarea-tareas-optativo-r/examen-Bixinhox/R').
+"

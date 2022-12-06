@@ -1,0 +1,148 @@
+---
+title: "Analisis de Salud Mental Durante la Pandemia de COVID-19"
+author: "Juan Pablo Vargas"
+date: "05/12/22"
+output: html_document
+---
+### Universidad Alberto Hurtado
+### Curso Introducción al Programa R
+#### Profesora: Valentina Andrade
+#### Ayudante: Dafne Vargas
+
+
+
+## 1. Abstract 
+
+
+
+
+## 2. Introduccion
+
+
+
+
+## 3. Analisis de Datos
+
+
+## Carga de Paquetes 
+
+```{r Carga de Paquetes, echo=TRUE}
+pacman::p_load(tidyverse,
+               haven, 
+               forcats,
+               car,
+               sjmisc,
+               sjPlot,
+               survey,
+               srvyr,
+               kableExtra)
+```
+
+
+## Carga de Datos
+
+```{r Carga Termometro Social, echo=TRUE}
+load("../output/data/TS4_Proc.RData")
+```
+
+
+## Creacion Objeto Encuesta 
+
+```{r Objeto Encuesta, echo=TRUE}
+objeto_encuesta<- TS4_Proc %>%
+  as_survey_design(ids = folio,
+                   strata = region,
+                   weights = factor_TS4)
+```
+
+
+## Creacion de Graficos 
+
+
+```{r Satisfaccion con la Vida, echo=FALSE}
+plot_frq(objeto_encuesta$variables$c1,
+         type = c("bar"),
+         title = "Satisfaccion con la vida",
+         show.ci = T,
+         coord.flip = T,
+         geom.colors = "violet",
+         weight.by = objeto_encuesta$variables$factor_TS4)
+```
+
+
+```{r Estado de Animo Actual, echo=FALSE}
+plot_frq(objeto_encuesta$variables$c2,
+         type = c("bar"),
+         title = "Estado de Animo Actual",
+         show.ci = T,
+         coord.flip = T,
+         geom.colors = "violet",
+         weight.by = objeto_encuesta$variables$factor_TS4)
+```
+
+
+```{r Necesidad de Tratamiento en Salud Mental, echo=FALSE}
+plot_frq(objeto_encuesta$variables$c3,
+         type = c("bar"),
+         title = "Necesidad de Tratamiento en Salud Mental",
+         show.ci = T,
+         coord.flip = T,
+         geom.colors = "violet",
+         weight.by = objeto_encuesta$variables$factor_TS4)
+```
+
+
+## Creacion de Tablas 
+
+```{r Consumo de Medicamentos, echo=FALSE}
+objeto_encuesta %>%
+  group_by(c6) %>%
+  summarise(porcentaje = survey_mean(vartype = "ci", na.rm = T)) %>%
+  mutate(porcentaje = porcentaje*100,
+         porcentaje_low = porcentaje_low*100,
+         porcentaje_upp = porcentaje_upp*100) %>%
+  kable(caption = "Consumo de Medicamentos",
+        format = "pipe",
+        colnames = c("variable",
+                     "prc %",
+                     "prc % limite inferior",
+                     "prc % limite superior"))
+```
+
+
+```{r Frecuencia de Conversacion de Problemas, echo=FALSE}
+objeto_encuesta %>%
+  group_by(c10) %>%
+  summarise(porcentaje = survey_mean(vartype = "ci", na.rm = T)) %>%
+  mutate(porcentaje = porcentaje*100,
+         porcentaje_low = porcentaje_low*100,
+         porcentaje_upp = porcentaje_upp*100) %>%
+  kable(caption = "Frecuencia de Conversacion de Problemas",
+        format = "pipe",
+        colnames = c("variable",
+                     "prc %",
+                     "prc % limite inferior",
+                     "prc % limite superior"))
+```
+
+
+```{r Padres han recibido Diagnostico de Salud Mental, echo=FALSE}
+objeto_encuesta %>%
+  group_by(c11) %>%
+  summarise(porcentaje = survey_mean(vartype = "ci", na.rm = T)) %>%
+  mutate(porcentaje = porcentaje*100,
+         porcentaje_low = porcentaje_low*100,
+         porcentaje_upp = porcentaje_upp*100) %>%
+  kable(caption = "Padres han recibido Diagnostico de Salud Mental",
+        format = "pipe",
+        colnames = c("variable",
+                     "prc %",
+                     "prc % limite inferior",
+                     "prc % limite superior"))
+```
+
+
+
+
+
+
